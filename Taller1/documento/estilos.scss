@@ -1,0 +1,63 @@
+$color-primario: #007bff;
+$color-secundario: #6c757d;
+$color-fondo: #f8f9fa;
+$fuente-titulo: Arial, sans-serif;
+$fuente-cuerpo: Verdana, sans-serif;
+
+@mixin centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function calcular-ancho($ancho, $total) {
+  @return ($ancho / $total) * 100%;
+}
+
+body {
+  font-family: $fuente-cuerpo;
+  background-color: $color-fondo;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fuente-titulo;
+}
+
+header {
+  background-color: $color-primario;
+  color: #fff;
+  padding: 1rem;
+  @include centrar;
+  flex-direction: column;
+  height: 10vh;
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 1rem;
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          &:hover {
+            color: $color-secundario;
+          }
+        }
+      }
+    }
+  }
+}
+button{
+  background-color: aquamarine;
+  color: #981818;
+  padding: 10px;
+}
+main {
+  margin: 2rem;
+}

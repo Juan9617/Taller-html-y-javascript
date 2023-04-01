@@ -1,0 +1,35 @@
+$color_fondo: rgba(216, 79, 122, 0.84);
+$color_texto:#64d380;
+$color-activo:rgba(66, 53, 107, 0.832);
+$tamano:200px;
+
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: $color_fondo;
+    padding: $tamano;
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            display: inline-block;
+
+            a{
+                display: block;
+            }
+
+            & :hover{
+                background-color: lighten($color-fondo);
+            }
+
+            &.activo{
+                background-color:$color-activo ;
+            }
+        }
+    }
+}
